@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+
+    <!-- Linking External Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="my-3">Bookmarker</h1>
+
+        <div id="bookmarkerForm" class="p-2 border-top border-bottom border-1 text-center">
+            <div class="bg-secondary-subtle p-3">
+                <h2>Bookmark you favorite sites</h2>
+
+                <!-- Bookmarker Form -->
+                <input type="text" name="siteCode" id="siteCode" class="form-control" hidden>
+
+                <label for="siteName" class="my-2">Site Name</label>
+                <input type="text" id="siteName" name="siteName" placeholder="Bookmark Name" class="form-control my-2">
+                <div class="invalid-feedback text-start d-none" id="invalidName">Please enter the website name</div>
+
+                <label for="siteUrl" class="my-2">Site URL</label>
+                <input type="text" id="siteUrl" name="siteUrl" placeholder="Website URL" class="form-control my-2">
+                <div class="valid-feedback text-start d-none" id="validUrl">Valid Website URL</div>
+                <div class="invalid-feedback text-start d-none" id="invalidUrl">Please enter a proper website URL in this form www.().com</div>
+
+
+                <button type="submit" class="btn btn-primary my-2 d-inline-block" id="submitFormBtn">Submit</button>
+                <button type="submit" class="btn btn-info my-2 d-none text-white" id="updateFormBtn">Update</button>
+                <button type="submit" class="btn btn-danger my-2 d-none" id="cancelFormBtn">Cancel</button>
+            </div>
+        </div>
+
+        <div id="bookmarkerContent">
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
